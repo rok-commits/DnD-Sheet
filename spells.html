@@ -8,7 +8,7 @@
 body {
   font-family: serif;
   margin: 0;
-  padding: 8px;
+  padding: 6px;
   background: #fff;
   color: #000;
 }
@@ -30,47 +30,29 @@ body {
   font-size: 18px;
 }
 
-/* Spell Slots */
-.slots-box {
-  border: 3px solid #000;
-  padding: 12px;
-  text-align: center;
+/* Spell Slots - Compact */
+.slots-compact {
+  border: 2px solid #000;
+  padding: 8px 10px;
   margin-bottom: 12px;
-}
-
-.slots-title {
-  font-size: 17px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.slots-display {
-  font-size: 32px;
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 6px;
-  letter-spacing: 8px;
-}
-
-.slots-note {
-  font-size: 15px;
-  font-style: italic;
 }
 
 /* Two Column Layout */
-.container {
+.two-col {
   width: 100%;
-  overflow: hidden;
+  border-collapse: collapse;
 }
 
-.left-col {
-  float: left;
-  width: 49%;
-  margin-right: 2%;
+.two-col td {
+  width: 50%;
+  vertical-align: top;
+  padding-right: 10px;
 }
 
-.right-col {
-  float: left;
-  width: 49%;
+.two-col td:last-child {
+  padding-right: 0;
 }
 
 /* Section Title */
@@ -107,35 +89,33 @@ body {
   line-height: 1.3;
 }
 
-/* Navigation */
+/* Navigation Table */
 .nav {
-  clear: both;
   border-top: 3px solid #000;
   padding-top: 10px;
   margin-top: 12px;
-  overflow: hidden;
 }
 
-.nav-cell {
-  float: left;
-  width: 23.5%;
-  margin-right: 2%;
+.nav table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nav td {
   border: 3px solid #000;
-  padding: 16px 6px;
   text-align: center;
+  width: 25%;
+  padding: 0;
 }
 
-.nav-cell:last-child {
-  margin-right: 0;
-}
-
-.nav-cell a {
+.nav a {
+  display: block;
+  padding: 14px 4px;
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 14px;
   text-transform: uppercase;
-  display: block;
 }
 
 .nav-current {
@@ -154,14 +134,13 @@ body {
   <div class="char-info">Spell DC 13 • Attack +5 • CHA</div>
 </div>
 
-<div class="slots-box">
-  <div class="slots-title">1st Level Spell Slots</div>
-  <div class="slots-display">○ ○ ○</div>
-  <div class="slots-note">(3 total - track separately)</div>
+<div class="slots-compact">
+  1st Level Spell Slots: 3 (track separately)
 </div>
 
-<div class="container">
-  <div class="left-col">
+<table class="two-col">
+<tr>
+  <td>
     <!-- LEFT COLUMN -->
     <div class="section-title">Cantrips (At Will)</div>
 
@@ -176,38 +155,10 @@ body {
       <div class="spell-details">1 Action • 30 ft / 5 ft cube • S, M • 1 min</div>
       <div class="spell-desc">Create sound or image of an object. Investigation DC 13 to see through it.</div>
     </div>
-
-    <div class="section-title">1st Level (3 Slots)</div>
-
-    <div class="spell-card">
-      <div class="spell-name">Dissonant Whispers</div>
-      <div class="spell-details">1 Action • 60 ft • V • Instant • WIS save</div>
-      <div class="spell-desc">3d6 psychic (half on save). On fail, must use reaction to move away.</div>
-    </div>
-
-    <div class="spell-card">
-      <div class="spell-name">Faerie Fire</div>
-      <div class="spell-details">1 Action • 60 ft / 20 ft cube • V • Conc 1 min • DEX save</div>
-      <div class="spell-desc">Creatures outlined in light. No invisibility. Attacks vs them have advantage.</div>
-    </div>
-  </div>
-
-  <div class="right-col">
+  </td>
+  
+  <td>
     <!-- RIGHT COLUMN -->
-    <div class="section-title">1st Level (cont.)</div>
-
-    <div class="spell-card">
-      <div class="spell-name">Tasha's Hideous Laughter</div>
-      <div class="spell-details">1 Action • 30 ft • V, S, M • Conc 1 min • WIS save</div>
-      <div class="spell-desc">Target prone + incapacitated. Repeats save at end of turn & when taking damage.</div>
-    </div>
-
-    <div class="spell-card">
-      <div class="spell-name">Charm Person</div>
-      <div class="spell-details">1 Action • 30 ft • V, S • 1 hour • WIS save</div>
-      <div class="spell-desc">Regards you as friendly. Adv on save if fighting. Knows when spell ends.</div>
-    </div>
-
     <div class="section-title">Components</div>
 
     <div class="spell-card">
@@ -221,14 +172,45 @@ body {
       <div class="spell-name">Concentration</div>
       <div class="spell-desc">Max 1 concentration spell. Ends if you cast another, take damage (CON save DC 10 or half damage), or become incapacitated.</div>
     </div>
-  </div>
+  </td>
+</tr>
+</table>
+
+<div class="section-title">1st Level Spells (3 Slots)</div>
+
+<div class="spell-card">
+  <div class="spell-name">Dissonant Whispers</div>
+  <div class="spell-details">1 Action • 60 ft • V • Instant • WIS save DC 13</div>
+  <div class="spell-desc">3d6 psychic (half on save). On fail, must use reaction to move away.</div>
+</div>
+
+<div class="spell-card">
+  <div class="spell-name">Faerie Fire</div>
+  <div class="spell-details">1 Action • 60 ft / 20 ft cube • V • Conc 1 min • DEX save DC 13</div>
+  <div class="spell-desc">Creatures outlined in light. No invisibility. Attacks vs them have advantage.</div>
+</div>
+
+<div class="spell-card">
+  <div class="spell-name">Tasha's Hideous Laughter</div>
+  <div class="spell-details">1 Action • 30 ft • V, S, M • Conc 1 min • WIS save DC 13</div>
+  <div class="spell-desc">Target prone + incapacitated. Repeats save at end of turn & when taking damage.</div>
+</div>
+
+<div class="spell-card">
+  <div class="spell-name">Charm Person</div>
+  <div class="spell-details">1 Action • 30 ft • V, S • 1 hour • WIS save DC 13</div>
+  <div class="spell-desc">Regards you as friendly. Adv on save if fighting. Knows when spell ends.</div>
 </div>
 
 <div class="nav">
-  <div class="nav-cell"><a href="index.html">Combat</a></div>
-  <div class="nav-cell"><a href="skills.html">Skills</a></div>
-  <div class="nav-cell nav-current"><a href="spells.html">Spells</a></div>
-  <div class="nav-cell"><a href="features.html">Features</a></div>
+  <table>
+    <tr>
+      <td><a href="index.html">Combat</a></td>
+      <td><a href="abilities.html">Abilities</a></td>
+      <td class="nav-current"><a href="spells.html">Spells</a></td>
+      <td><a href="features.html">Features</a></td>
+    </tr>
+  </table>
 </div>
 
 </body>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Finn - Abilities</title>
+<style>
+body {
+  font-family: serif;
+  margin: 0;
+  padding: 6px;
+  background: #fff;
+  color: #000;
+}
+
+.header {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.char-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.char-info {
+  font-size: 18px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 3px solid #000;
+  padding-bottom: 6px;
+  margin: 12px 0 10px 0;
+}
+
+/* Abilities - 3x2 Grid */
+.abilities-grid {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+.abilities-grid td {
+  border: 3px solid #000;
+  padding: 12px 8px;
+  text-align: center;
+  width: 33.33%;
+}
+
+.ability-name {
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.ability-score {
+  font-size: 40px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.ability-mod {
+  font-size: 28px;
+  display: block;
+}
+
+/* Info boxes */
+.info-box {
+  border: 2px solid #000;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.info-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.info-text {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.info-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Navigation Table */
+.nav {
+  border-top: 3px solid #000;
+  padding-top: 10px;
+  margin-top: 12px;
+}
+
+.nav table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nav td {
+  border: 3px solid #000;
+  text-align: center;
+  width: 25%;
+  padding: 0;
+}
+
+.nav a {
+  display: block;
+  padding: 14px 4px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.nav-current {
+  background: #000;
+}
+
+.nav-current a {
+  color: #fff;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="char-name">Finn • Abilities</div>
+  <div class="char-info">Half-Elf Bard 2</div>
+</div>
+
+<div class="section-title">Ability Scores</div>
+
+<table class="abilities-grid">
+  <tr>
+    <td>
+      <span class="ability-name">STR</span>
+      <span class="ability-score">11</span>
+      <span class="ability-mod">+0</span>
+    </td>
+    <td>
+      <span class="ability-name">DEX</span>
+      <span class="ability-score">15</span>
+      <span class="ability-mod">+2</span>
+    </td>
+    <td>
+      <span class="ability-name">CON</span>
+      <span class="ability-score">14</span>
+      <span class="ability-mod">+2</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span class="ability-name">INT</span>
+      <span class="ability-score">11</span>
+      <span class="ability-mod">+0</span>
+    </td>
+    <td>
+      <span class="ability-name">WIS</span>
+      <span class="ability-score">13</span>
+      <span class="ability-mod">+1</span>
+    </td>
+    <td>
+      <span class="ability-name">CHA</span>
+      <span class="ability-score">17</span>
+      <span class="ability-mod">+3</span>
+    </td>
+  </tr>
+</table>
+
+<div class="info-box">
+  <div class="info-title">Saving Throws</div>
+  <div class="info-text"><b>Proficient:</b> DEX +4, CHA +5</div>
+  <div class="info-text"><b>Others:</b> STR +0, CON +2, INT +0, WIS +1</div>
+</div>
+
+<div class="info-box">
+  <div class="info-title">Expertise (Double Proficiency)</div>
+  <div class="info-text">Deception +5, Persuasion +5</div>
+</div>
+
+<div class="info-box">
+  <div class="info-title">Proficient Skills</div>
+  <div class="info-text">Acrobatics +3, Deception +5, Insight +3, Perception +3, Persuasion +5, Stealth +4</div>
+</div>
+
+<div class="info-box">
+  <div class="info-title">Jack of All Trades</div>
+  <div class="info-text">Add +1 to ability checks using skills you're not proficient in</div>
+</div>
+
+<div class="info-box">
+  <div class="info-title">Languages & Proficiencies</div>
+  <div class="info-text"><b>Languages:</b> Common, Elvish, Sylvan</div>
+  <div class="info-text"><b>Armor:</b> Light armor</div>
+  <div class="info-text"><b>Weapons:</b> Simple weapons</div>
+  <div class="info-text"><b>Tools:</b> Flute, Harp, Woodcarver's tools</div>
+</div>
+
+<div class="info-box">
+  <div class="info-title">Passive Scores</div>
+  <div class="info-text">Passive Perception: 13 • Passive Insight: 13 • Passive Investigation: 12</div>
+</div>
+
+<div class="nav">
+  <table>
+    <tr>
+      <td><a href="index.html">Combat</a></td>
+      <td class="nav-current"><a href="abilities.html">Abilities</a></td>
+      <td><a href="spells.html">Spells</a></td>
+      <td><a href="features.html">Features</a></td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>

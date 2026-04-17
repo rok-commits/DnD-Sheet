@@ -8,7 +8,7 @@
 body {
   font-family: serif;
   margin: 0;
-  padding: 8px;
+  padding: 6px;
   background: #fff;
   color: #000;
 }
@@ -31,20 +31,19 @@ body {
 }
 
 /* Two Column Layout */
-.container {
+.two-col {
   width: 100%;
-  overflow: hidden;
+  border-collapse: collapse;
 }
 
-.left-col {
-  float: left;
-  width: 49%;
-  margin-right: 2%;
+.two-col td {
+  width: 50%;
+  vertical-align: top;
+  padding-right: 10px;
 }
 
-.right-col {
-  float: left;
-  width: 49%;
+.two-col td:last-child {
+  padding-right: 0;
 }
 
 /* Section Title */
@@ -81,35 +80,33 @@ body {
   line-height: 1.3;
 }
 
-/* Navigation */
+/* Navigation Table */
 .nav {
-  clear: both;
   border-top: 3px solid #000;
   padding-top: 10px;
   margin-top: 12px;
-  overflow: hidden;
 }
 
-.nav-cell {
-  float: left;
-  width: 23.5%;
-  margin-right: 2%;
+.nav table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nav td {
   border: 3px solid #000;
-  padding: 16px 6px;
   text-align: center;
+  width: 25%;
+  padding: 0;
 }
 
-.nav-cell:last-child {
-  margin-right: 0;
-}
-
-.nav-cell a {
+.nav a {
+  display: block;
+  padding: 14px 4px;
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 14px;
   text-transform: uppercase;
-  display: block;
 }
 
 .nav-current {
@@ -128,8 +125,9 @@ body {
   <div class="char-info">Bard 2 • Half-Elf</div>
 </div>
 
-<div class="container">
-  <div class="left-col">
+<table class="two-col">
+<tr>
+  <td>
     <!-- LEFT COLUMN -->
     <div class="section-title">Bard Features</div>
 
@@ -156,9 +154,9 @@ body {
       <div class="feature-meta">Passive</div>
       <div class="feature-desc">Add +1 to any ability check you make using a skill you're not proficient in.</div>
     </div>
-  </div>
-
-  <div class="right-col">
+  </td>
+  
+  <td>
     <!-- RIGHT COLUMN -->
     <div class="section-title">Half-Elf Traits</div>
 
@@ -191,14 +189,19 @@ body {
       <div class="feature-title">Money</div>
       <div class="feature-desc">119 CP, 25 SP, 26 GP</div>
     </div>
-  </div>
-</div>
+  </td>
+</tr>
+</table>
 
 <div class="nav">
-  <div class="nav-cell"><a href="index.html">Combat</a></div>
-  <div class="nav-cell"><a href="skills.html">Skills</a></div>
-  <div class="nav-cell"><a href="spells.html">Spells</a></div>
-  <div class="nav-cell nav-current"><a href="features.html">Features</a></div>
+  <table>
+    <tr>
+      <td><a href="index.html">Combat</a></td>
+      <td><a href="abilities.html">Abilities</a></td>
+      <td><a href="spells.html">Spells</a></td>
+      <td class="nav-current"><a href="features.html">Features</a></td>
+    </tr>
+  </table>
 </div>
 
 </body>
