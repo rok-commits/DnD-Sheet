@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=758">
+<title>Finn - Skills</title>
+<style>
+body {
+  font-family: serif;
+  margin: 0;
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  width: 758px;
+}
+
+.header {
+  background: #000;
+  color: #fff;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.char-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.char-info {
+  font-size: 16px;
+}
+
+/* Two Column Layout */
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.left-col {
+  float: left;
+  width: 260px;
+  margin-right: 10px;
+}
+
+.right-col {
+  float: left;
+  width: 464px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 3px solid #000;
+  padding-bottom: 5px;
+  margin: 10px 0 8px 0;
+}
+
+/* Abilities */
+.ability-box {
+  border: 2px solid #000;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 9px;
+}
+
+.ability-name {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.ability-score {
+  font-size: 26px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.ability-mod {
+  font-size: 20px;
+  display: block;
+}
+
+/* Skills Compact */
+.skill-row {
+  border-bottom: 1px solid #ccc;
+  padding: 7px 3px;
+  overflow: hidden;
+}
+
+.skill-name {
+  float: left;
+  font-size: 16px;
+}
+
+.skill-name.prof {
+  font-weight: bold;
+}
+
+.skill-mod {
+  float: right;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.skill-ability {
+  float: right;
+  font-size: 13px;
+  margin-right: 14px;
+  margin-top: 2px;
+  font-style: italic;
+}
+
+/* Info boxes */
+.info-box {
+  border: 2px solid #000;
+  padding: 10px;
+  margin-bottom: 9px;
+}
+
+.info-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info-text {
+  font-size: 15px;
+}
+
+/* Navigation */
+.nav {
+  clear: both;
+  border-top: 3px solid #000;
+  padding-top: 10px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.nav-cell {
+  float: left;
+  width: 23.5%;
+  margin-right: 2%;
+  border: 3px solid #000;
+  padding: 14px 6px;
+  text-align: center;
+}
+
+.nav-cell:last-child {
+  margin-right: 0;
+}
+
+.nav-cell a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  display: block;
+}
+
+.nav-current {
+  background: #000;
+}
+
+.nav-current a {
+  color: #fff;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="char-name">Finn • Skills</div>
+  <div class="char-info">Prof +2 • Jack of All Trades +1</div>
+</div>
+
+<div class="container">
+  <div class="left-col">
+    <!-- LEFT COLUMN -->
+    <div class="section-title">Abilities</div>
+
+    <div class="ability-box">
+      <span class="ability-name">STR</span>
+      <span class="ability-score">11</span>
+      <span class="ability-mod">+0</span>
+    </div>
+
+    <div class="ability-box">
+      <span class="ability-name">DEX</span>
+      <span class="ability-score">15</span>
+      <span class="ability-mod">+2</span>
+    </div>
+
+    <div class="ability-box">
+      <span class="ability-name">CON</span>
+      <span class="ability-score">14</span>
+      <span class="ability-mod">+2</span>
+    </div>
+
+    <div class="ability-box">
+      <span class="ability-name">INT</span>
+      <span class="ability-score">11</span>
+      <span class="ability-mod">+0</span>
+    </div>
+
+    <div class="ability-box">
+      <span class="ability-name">WIS</span>
+      <span class="ability-score">13</span>
+      <span class="ability-mod">+1</span>
+    </div>
+
+    <div class="ability-box">
+      <span class="ability-name">CHA</span>
+      <span class="ability-score">17</span>
+      <span class="ability-mod">+3</span>
+    </div>
+
+    <div class="info-box">
+      <div class="info-title">Saves</div>
+      <div class="info-text">DEX +4, CHA +5</div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-title">Expertise</div>
+      <div class="info-text">Deception, Persuasion</div>
+    </div>
+  </div>
+
+  <div class="right-col">
+    <!-- RIGHT COLUMN -->
+    <div class="section-title">Skills (★ = Prof)</div>
+
+    <div class="skill-row">
+      <span class="skill-name prof">★ Deception</span>
+      <span class="skill-mod">+5</span>
+      <span class="skill-ability">CHA</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name prof">★ Persuasion</span>
+      <span class="skill-mod">+5</span>
+      <span class="skill-ability">CHA</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Intimidation</span>
+      <span class="skill-mod">+4</span>
+      <span class="skill-ability">CHA</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name prof">★ Stealth</span>
+      <span class="skill-mod">+4</span>
+      <span class="skill-ability">DEX</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Performance</span>
+      <span class="skill-mod">+4</span>
+      <span class="skill-ability">CHA</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name prof">★ Acrobatics</span>
+      <span class="skill-mod">+3</span>
+      <span class="skill-ability">DEX</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name prof">★ Insight</span>
+      <span class="skill-mod">+3</span>
+      <span class="skill-ability">WIS</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name prof">★ Perception</span>
+      <span class="skill-mod">+3</span>
+      <span class="skill-ability">WIS</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Sleight of Hand</span>
+      <span class="skill-mod">+3</span>
+      <span class="skill-ability">DEX</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Investigation</span>
+      <span class="skill-mod">+2</span>
+      <span class="skill-ability">INT</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Animal Handling</span>
+      <span class="skill-mod">+2</span>
+      <span class="skill-ability">WIS</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Medicine</span>
+      <span class="skill-mod">+2</span>
+      <span class="skill-ability">WIS</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Survival</span>
+      <span class="skill-mod">+2</span>
+      <span class="skill-ability">WIS</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Arcana</span>
+      <span class="skill-mod">+1</span>
+      <span class="skill-ability">INT</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">History</span>
+      <span class="skill-mod">+1</span>
+      <span class="skill-ability">INT</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Nature</span>
+      <span class="skill-mod">+1</span>
+      <span class="skill-ability">INT</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Religion</span>
+      <span class="skill-mod">+1</span>
+      <span class="skill-ability">INT</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-name">Athletics</span>
+      <span class="skill-mod">+1</span>
+      <span class="skill-ability">STR</span>
+    </div>
+
+    <div class="info-box" style="margin-top: 10px;">
+      <div class="info-title">Languages</div>
+      <div class="info-text">Common, Elvish, Sylvan</div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-title">Proficiencies</div>
+      <div class="info-text">Light armor, simple weapons, flute, harp, woodcarver's tools</div>
+    </div>
+  </div>
+</div>
+
+<div class="nav">
+  <div class="nav-cell"><a href="index.html">Combat</a></div>
+  <div class="nav-cell nav-current"><a href="skills.html">Skills</a></div>
+  <div class="nav-cell"><a href="spells.html">Spells</a></div>
+  <div class="nav-cell"><a href="features.html">Features</a></div>
+</div>
+
+</body>
+</html>
