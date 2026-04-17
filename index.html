@@ -2,36 +2,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=758">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Finn - Combat</title>
 <style>
 body {
   font-family: serif;
   margin: 0;
-  padding: 12px;
+  padding: 8px;
   background: #fff;
   color: #000;
-  width: 758px;
 }
 
 .header {
   background: #000;
   color: #fff;
-  padding: 10px 12px;
+  padding: 10px;
   margin-bottom: 10px;
 }
 
 .char-name {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 3px;
 }
 
 .char-info {
-  font-size: 16px;
+  font-size: 18px;
 }
 
-/* Two Column Layout - using floats for better Kindle support */
+/* Two Column Layout */
 .container {
   width: 100%;
   overflow: hidden;
@@ -39,30 +38,29 @@ body {
 
 .left-col {
   float: left;
-  width: 280px;
-  margin-right: 10px;
+  width: 32%;
+  margin-right: 2%;
 }
 
 .right-col {
   float: left;
-  width: 444px;
+  width: 66%;
 }
 
 /* Quick Stats */
 .stats-grid {
   border: 2px solid #000;
-  padding: 10px;
+  padding: 10px 8px;
   margin-bottom: 10px;
 }
 
 .stats-row {
   margin-bottom: 8px;
+  overflow: hidden;
 }
 
-.stats-row:after {
-  content: "";
-  display: table;
-  clear: both;
+.stats-row:last-child {
+  margin-bottom: 0;
 }
 
 .stat-cell {
@@ -79,14 +77,14 @@ body {
 }
 
 .stat-label {
-  font-size: 13px;
+  font-size: 16px;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .stat-value {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   display: block;
 }
@@ -94,58 +92,58 @@ body {
 /* HP Compact */
 .hp-compact {
   border: 3px solid #000;
-  padding: 12px;
+  padding: 14px 10px;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .hp-label {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .hp-display {
-  font-size: 38px;
+  font-size: 48px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .hp-note {
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
 }
 
 /* Section Title */
 .section-title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   text-transform: uppercase;
   border-bottom: 3px solid #000;
-  padding-bottom: 5px;
-  margin: 10px 0 8px 0;
+  padding-bottom: 6px;
+  margin: 12px 0 10px 0;
 }
 
 /* Attack Boxes */
 .attack-box {
   border: 2px solid #000;
   padding: 12px;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 
 .attack-name {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .attack-details {
-  font-size: 15px;
-  margin-bottom: 5px;
+  font-size: 17px;
+  margin-bottom: 6px;
 }
 
 .attack-stats {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -153,18 +151,19 @@ body {
 .info-box {
   border: 2px solid #000;
   padding: 10px;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 
 .info-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 6px;
 }
 
 .info-item {
-  font-size: 15px;
-  margin-bottom: 3px;
+  font-size: 17px;
+  margin-bottom: 4px;
+  line-height: 1.3;
 }
 
 /* Navigation */
@@ -173,12 +172,7 @@ body {
   border-top: 3px solid #000;
   padding-top: 10px;
   margin-top: 12px;
-}
-
-.nav:after {
-  content: "";
-  display: table;
-  clear: both;
+  overflow: hidden;
 }
 
 .nav-cell {
@@ -186,7 +180,7 @@ body {
   width: 23.5%;
   margin-right: 2%;
   border: 3px solid #000;
-  padding: 14px 6px;
+  padding: 16px 6px;
   text-align: center;
 }
 
@@ -198,7 +192,7 @@ body {
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 17px;
   text-transform: uppercase;
   display: block;
 }
@@ -236,7 +230,7 @@ body {
       <div class="stats-row">
         <div class="stat-cell">
           <span class="stat-label">Speed</span>
-          <span class="stat-value">30 ft</span>
+          <span class="stat-value">30</span>
         </div>
         <div class="stat-cell">
           <span class="stat-label">Prof</span>
@@ -247,20 +241,20 @@ body {
 
     <div class="hp-compact">
       <div class="hp-label">Hit Points</div>
-      <div class="hp-display">17 / 17</div>
+      <div class="hp-display">17/17</div>
       <div class="hp-note">(Track separately)</div>
     </div>
 
     <div class="info-box">
       <div class="info-title">Resources</div>
-      <div class="info-item">• Bardic Insp: 3/LR (1d6)</div>
-      <div class="info-item">• 1st Lvl Slots: 3</div>
+      <div class="info-item">• Bardic: 3/LR (1d6)</div>
+      <div class="info-item">• 1st Slots: 3</div>
       <div class="info-item">• Hit Dice: 2d8</div>
     </div>
 
     <div class="info-box">
       <div class="info-title">Senses</div>
-      <div class="info-item">• Pass Perception: 13</div>
+      <div class="info-item">• Pass Perc: 13</div>
       <div class="info-item">• Pass Insight: 13</div>
       <div class="info-item">• Darkvision: 60 ft</div>
     </div>
